@@ -41,15 +41,23 @@ function App() {
       });
   };
 
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      window.history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+  };
+
   return (
     <div className="app-shell">
       <nav className="site-nav">
         <div className="nav-links">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Project</a>
-          <a href="#contact">Contact</a>
+          <button type="button" onClick={() => scrollToSection('home')}>Home</button>
+          <button type="button" onClick={() => scrollToSection('about')}>About</button>
+          <button type="button" onClick={() => scrollToSection('skills')}>Skills</button>
+          <button type="button" onClick={() => scrollToSection('projects')}>Project</button>
+          <button type="button" onClick={() => scrollToSection('contact')}>Contact</button>
         </div>
       </nav>
 
@@ -134,33 +142,11 @@ function App() {
           <div className="about-grid">
             <div className="about-visual about-profile">
               <div className="about-photo-ring about-photo-circle">
-                <div className="about-sketch">
-                  <svg className="sketch-svg" viewBox="0 0 220 220" aria-hidden="true">
-                    <defs>
-                      <linearGradient id="sketchGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#65a7ff" />
-                        <stop offset="100%" stopColor="#1fb6ff" />
-                      </linearGradient>
-                    </defs>
-                    <circle cx="110" cy="110" r="96" fill="none" stroke="url(#sketchGlow)" strokeWidth="2" strokeDasharray="6 10" />
-                    <g className="sketch-badge">
-                      <rect x="110" y="28" width="82" height="32" rx="16" fill="rgba(31, 182, 255, 0.14)" stroke="#1fb6ff" strokeWidth="1.5" />
-                      <text x="151" y="50" textAnchor="middle" fontSize="12" fontWeight="700" fill="#ffffff">Vishnu Bohara</text>
-                    </g>
-                    <path d="M70 140 C80 90 140 90 150 140" fill="none" stroke="#ffffff" strokeWidth="3" />
-                    <path d="M90 100 C92 115 108 115 110 100" fill="none" stroke="#ffffff" strokeWidth="3" />
-                    <path d="M130 100 C132 115 148 115 150 100" fill="none" stroke="#ffffff" strokeWidth="3" />
-                    <path d="M80 70 C90 55 130 55 140 70" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
-                    <path d="M88 82 C96 70 124 70 132 82" fill="none" stroke="#7c9eff" strokeWidth="2" strokeLinecap="round" />
-                    <circle cx="92" cy="106" r="4" fill="#ffffff" />
-                    <circle cx="142" cy="106" r="4" fill="#ffffff" />
-                    <path d="M95 150 C100 160 120 160 125 150" fill="none" stroke="#7c9eff" strokeWidth="3" strokeLinecap="round" />
-                    <path className="sketch-line" d="M60 60 L70 58 L80 68" fill="none" stroke="#1fb6ff" strokeWidth="3" strokeLinecap="round" />
-                    <path className="sketch-line" d="M160 55 L150 53 L140 63" fill="none" stroke="#1fb6ff" strokeWidth="3" strokeLinecap="round" />
-                    <path className="sketch-line" d="M48 140 L62 132" fill="none" stroke="#7c9eff" strokeWidth="2" strokeDasharray="3 4" />
-                    <path className="sketch-line" d="M170 142 L154 134" fill="none" stroke="#7c9eff" strokeWidth="2" strokeDasharray="3 4" />
-                  </svg>
-                </div>
+                <img
+                  className="about-photo-circle-img"
+                  src="/aboutme.png"
+                  alt="Vishnu Bohara"
+                />
               </div>
             </div>
             <div className="about-copy">
@@ -179,9 +165,13 @@ function App() {
                 I'm eager to learn, grow, and gain real-world experience
                 through an internship opportunity.
               </p>
-              <a className="button primary about-button" href="#skills">
+              <button
+                type="button"
+                className="button primary about-button"
+                onClick={() => scrollToSection('skills')}
+              >
                 See My Skills
-              </a>
+              </button>
             </div>
           </div>
         </section>
