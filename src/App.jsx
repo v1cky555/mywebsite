@@ -15,6 +15,7 @@ function App() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [statusMessage, setStatusMessage] = useState('');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -47,12 +48,26 @@ function App() {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
       window.history.replaceState(null, '', window.location.pathname + window.location.search);
     }
+    setIsMenuOpen(false);
   };
 
   return (
     <div className="app-shell">
       <nav className="site-nav">
-        <div className="nav-links">
+        <div className="nav-brand">VB</div>
+        <button
+          type="button"
+          className={`mobile-nav-toggle ${isMenuOpen ? 'open' : ''}`}
+          onClick={() => setIsMenuOpen((open) => !open)}
+          aria-expanded={isMenuOpen}
+          aria-label="Toggle navigation menu"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
+        <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
           <button type="button" onClick={() => scrollToSection('home')}>Home</button>
           <button type="button" onClick={() => scrollToSection('about')}>About</button>
           <button type="button" onClick={() => scrollToSection('skills')}>Skills</button>
@@ -60,6 +75,11 @@ function App() {
           <button type="button" onClick={() => scrollToSection('contact')}>Contact</button>
         </div>
       </nav>
+
+      <div
+        className={`mobile-nav-overlay ${isMenuOpen ? 'open' : ''}`}
+        onClick={() => setIsMenuOpen(false)}
+      />
 
       <main>
         <section className="hero-section" id="home">
