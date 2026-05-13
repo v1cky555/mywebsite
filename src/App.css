@@ -167,9 +167,16 @@
     backdrop-filter: blur(18px);
     box-shadow: -15px 0 40px rgba(0, 0, 0, 0.35);
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     gap: 1.5rem;
-    padding: 5rem 1.5rem 2rem;
+    padding: 1.5rem 1.5rem 2rem;
     z-index: 21;
+  }
+
+  .nav-links::before {
+    content: '';
+    display: none;
   }
 }
 
@@ -942,6 +949,14 @@
   .about-panel .about-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .about-panel .about-grid .about-visual {
+    order: 2;
+  }
+
+  .about-panel .about-grid .about-copy {
+    order: 1;
   }
 
   .hero-photo-ring,
