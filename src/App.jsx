@@ -96,14 +96,14 @@ function App() {
                 projects and excited to grow in the design industry.
               </p>
               <div className="hero-actions">
-                <a className="button primary" href="/cv.pdf" download>
+                <a className="button primary" href="/Bishnu_CV.pdf" download>
                   Download CV
                 </a>
               </div>
               <div className="social-links">
                 <a
                   className="social-icon social-linkedin"
-                  href="https://www.linkedin.com"
+                  href="https://www.linkedin.com/in/bishnu-bohara-ab0b942b3/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="LinkedIn"
@@ -112,11 +112,8 @@ function App() {
                   <path d="M6.94 6.5c0 1.07-.86 1.94-1.92 1.94A1.93 1.93 0 0 1 3.1 6.5c0-1.08.86-1.95 1.92-1.95 1.06 0 1.92.87 1.92 1.95zm.1 4.57H3.1v10.9h3.95V11.06zm7.04 0h-3.95v10.9h3.95v-6.05c0-3.3 4.44-3.57 4.44 0v6.05h3.95v-7.55c0-6.01-6.49-5.79-8.39-2.82V11.06z" />
                 </svg>
               </a>
-              <a
+              <span
                 className="social-icon social-instagram"
-                href="https://www.instagram.com"
-                target="_blank"
-                rel="noreferrer"
                 aria-label="Instagram"
               >
                 <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -124,29 +121,15 @@ function App() {
                   <circle cx="17.7" cy="6.3" r="1.2" />
                   <path d="M16.68 2H7.32A5.32 5.32 0 0 0 2 7.32v9.36A5.32 5.32 0 0 0 7.32 22h9.36A5.32 5.32 0 0 0 22 16.68V7.32A5.32 5.32 0 0 0 16.68 2zm3.15 14.68a3.15 3.15 0 0 1-3.15 3.15H7.32a3.15 3.15 0 0 1-3.15-3.15V7.32a3.15 3.15 0 0 1 3.15-3.15h9.36a3.15 3.15 0 0 1 3.15 3.15v9.36z" />
                 </svg>
-              </a>
-              <a
+              </span>
+              <span
                 className="social-icon social-facebook"
-                href="https://www.facebook.com"
-                target="_blank"
-                rel="noreferrer"
                 aria-label="Facebook"
               >
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M15.12 8.5h1.98V4.98h-2.56c-2.21 0-3.64 1.43-3.64 3.62v1.35H8.8v2.48h2.1V20h2.55v-7.07h2.4l.38-2.48h-2.78V9.98c0-.72.19-1.22 1.2-1.22z" />
                 </svg>
-              </a>
-              <a
-                className="social-icon social-tiktok"
-                href="https://www.tiktok.com"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="TikTok"
-              >
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M15.2 8.3c-.2-.1-.4-.1-.5-.1-.2 0-.4 0-.5.1v5.2c0 1.7-1.3 3-3 3a3.04 3.04 0 0 1-3-3 3.04 3.04 0 0 1 3-3c.2 0 .4 0 .5.1V9.8c-.4-.2-.8-.3-1.3-.3-2.1 0-3.8 1.7-3.8 3.8S8.6 17.1 10.7 17.1s3.8-1.7 3.8-3.8V9.6c.8.5 1.8.9 2.8 1.1.1-.4.1-.9.1-1.3-.1-.1-.4-.4-.7-.6a4.95 4.95 0 0 1-2.4-.5z" />
-                </svg>
-              </a>
+              </span>
             </div>
           </div>
 
@@ -263,22 +246,32 @@ function App() {
             Our <span>Projects</span>
           </h2>
           <div className="projects-grid">
-            <article className="project-card project-fitstart">
+            <a
+              href="https://www.figma.com/design/cHS82mmZp1Z6GMar5RAojb/Fitstart?node-id=0-1&t=uCWkNE6C8fYAjvpm-1"
+              target="_blank"
+              rel="noreferrer"
+              className="project-card project-fitstart"
+            >
               <div className="project-card-image">
-                <div className="project-card-logo">FitStart</div>
+                <img src="/logo.png" alt="FitStart logo" className="project-logo" />
               </div>
               <div className="project-card-footer">
                 <p>Fitness (FitStart)</p>
               </div>
-            </article>
-            <article className="project-card project-daraz">
+            </a>
+            <a
+              href="https://www.figma.com/design/NxsnnX3Sr753DWwjRKr5Pe/daraz?node-id=10-5&t=3v5H2HEaGs6BRUms-1"
+              target="_blank"
+              rel="noreferrer"
+              className="project-card project-daraz"
+            >
               <div className="project-card-image">
                 <div className="project-card-logo">Daraz</div>
               </div>
               <div className="project-card-footer">
                 <p>Daraz (Re-Design)</p>
               </div>
-            </article>
+            </a>
           </div>
         </section>
 

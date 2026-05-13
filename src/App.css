@@ -840,6 +840,12 @@
   text-transform: uppercase;
 }
 
+.project-logo {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: contain;
+}
+
 .project-card-footer {
   padding: 1.5rem 1.25rem;
   background: #1fb6ff;
@@ -854,11 +860,21 @@
 }
 
 .project-fitstart .project-card-image {
+  background: linear-gradient(180deg, #ffffff 0%, #000000 100%);
+  transition: background 0.3s ease;
+}
+
+.project-fitstart:hover .project-card-image {
   background: linear-gradient(180deg, #42b883 0%, #2d8e6a 100%);
 }
 
 .project-daraz .project-card-image {
-  background: linear-gradient(180deg, #9fc9c2 0%, #7bb0ab 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #000000 100%);
+  transition: background 0.3s ease;
+}
+
+.project-daraz:hover .project-card-image {
+  background: linear-gradient(180deg, #ff8c42 0%, #ff6b1a 100%);
 }
 
 .contact-panel {
